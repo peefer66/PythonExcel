@@ -1,7 +1,13 @@
 import xlrd
+import os
+
+
+
 try:
-   #  file_location = 'c:\documents and settings\pfieldhouse\my documents\git\pythonexcel\YT-triforcelink\data.xlsx'
-    workbook = xlrd.open_workbook('data.xlsx')
+    file_location = os.getcwd()
+   print( os.path.join(file_location, data.xlsx))
+    print(file_location)
+    workbook = xlrd.open_workbook(file_location + '/' + 'data.xlsx')
     sheet = workbook.sheet_by_index(0)
     """
     rows and columns are referenced by their index 
